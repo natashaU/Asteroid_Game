@@ -1,8 +1,8 @@
 *** Natasha Umer / 08/07/17 ***
 
-#Battlestar Andromeda Proposal
+# Battlestar Andromeda Proposal
 
-##What is Battlestar Andromeda?
+## What is Battlestar Andromeda?
 
 As a science and space fan, I thought it would be fun to make a game that
 utilizes the user to move a spaceship to avoid being hit by an asteroid. This is
@@ -11,18 +11,18 @@ at the time I thought of the game. Similarly, suprise "aliens" will try to attac
 the spaceship, including a DIV "alien", containg a picture of Donald Trump for 
 humor purposes that will attack the spaceship. 
 
-####Wireframe
+#### Wireframe
 
 (Your wireframes go here. Preferably two or more)
 
-####Initial thoughts on game structure
+#### Initial thoughts on game structure
 
 I will make this game similar to the racecar game by allowing the user to move a div
 a certain amount of pixels. However, this will have an added step of interactivity by
 declaring a winner or loser based on if the spaceship div and the asteroid div ever
 are in the same position at the same time. 
 
-####Phases of Completion
+#### Phases of Completion
 
 * Find an HD background image of the stars
 * Create a DIV for the space ship.
@@ -39,7 +39,7 @@ with the spaceship position, then the user has lost the game.
 * create a form so the user can enter the name
 * Let the user know whether S(he) has won or lost the game.  
 
-####Links and Resources
+#### Links and Resources
 
 * https://www.w3schools.com/graphics/game_intro.asp
 * https://www.codeproject.com/Articles/32354/How-to-build-an-asteroids-inspired-Silverlight-gam
