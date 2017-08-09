@@ -2,7 +2,7 @@
 
 # Battlestar Andromeda Proposal
 
-## What is Battlestar Andromeda?
+## What is Battlestar Andromeda (working title)?
 
 As a science and space fan, I thought it would be fun to make a game that
 utilizes the user to move a spaceship to avoid being hit by an asteroid. This is
