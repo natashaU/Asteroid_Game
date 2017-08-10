@@ -3,21 +3,27 @@ window.onload = function() {
   document.getElementById("button").addEventListener("click", startEvent);
 
 
-  let box1 = document.querySelector('.box1');
-  let box2 = document.querySelector('.box2');
+  const $box1 = $('.box1')[0];
+  const $box2 = $('.box2')[0];
+
+
+ // mixing jquery and javascript for the same variables since getBoundingClientRect
+ // doesn't seem to work with Jquery and the Jquery method is messier.
+  //let box1 = document.querySelector('.box1');
+  //let box2 = document.querySelector('.box2');
 
   var counter = 0
   var goRight = 0
 
 
   function isCollision(){
-    var box1Pos = box1.getBoundingClientRect();
-    var box2Pos = box2.getBoundingClientRect();
+    var $box1Pos = $box1.getBoundingClientRect();
+    var $box2Pos = $box2.getBoundingClientRect();
 
-    if (box1Pos.top < box2Pos.top + box2Pos.width &&
-        box1Pos.top + box1Pos.width > box2Pos.top &&
-       box1Pos.left < box2Pos.left + box2Pos.height &&
-        box1Pos.height + box1Pos.left > box2Pos.left) {
+    if ($box1Pos.top < $box2Pos.top + $box2Pos.width &&
+        $box1Pos.top + $box1Pos.width > $box2Pos.top &&
+       $box1Pos.left < $box2Pos.left + $box2Pos.height &&
+        $box1Pos.height + $box1Pos.left > $box2Pos.left) {
       console.log('is collision')
       return true;
     } else {
