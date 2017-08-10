@@ -3,8 +3,8 @@ window.onload = function() {
   document.getElementById("button").addEventListener("click", startEvent);
 
 
-  const $box1 = $('.box1')[0]; // represents space ship
-  const $box2 = $('.box2')[0]; // represents first asteroid
+  const $box1 = $('#box1')[0]; // represents space ship
+  const $box2 = $('#box2')[0]; // represents first asteroid
 
 
   let counter = 0
@@ -27,7 +27,7 @@ window.onload = function() {
     } else {
       return false
     }
-  } // end is collision
+  } // end 'is collision' function
 
 
 
@@ -62,11 +62,11 @@ window.onload = function() {
        //if(isCollision(box1,box2)){alert('collision')};
      } // end if 37 left statement
 
-    }); // end event listner keydown event
-  } // end function start event
+    }); // end 'event listner keydown event'
+  } // end 'start event' function
 
 
-} // window onlaod
+} // window onLoad end function
 
 
 
