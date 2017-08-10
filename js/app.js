@@ -25,52 +25,37 @@ window.onload = function() {
     }
   } // end is collision
 
-//function myFunction() {
- //   setInterval(function(){ alert("Hello"); }, 3000);
-//}
-
-function alertMe() {
-  alert('hello')
-}
 
 
 
   function startEvent() {
 
-    //setInterval(function(){ alert("Hello"); }, 3000)
+  setInterval(isCollision, 300);
 
-  //setInterval(alertMe, 3000)
-
-  setInterval(isCollision, 300)
-
-
-     //setInterval(function(){ alert("Hello"); }, 3000)
-
-    //window.setInterval(isCollision(box1,box2), 100)
     document.addEventListener('keydown', (event) => {
 
       if (event.keyCode === 40) {
         counter += 10;
         document.querySelector('.box1').style.top = counter + "px";
-       if(isCollision(box1,box2)){alert('collision')};
+       //if(isCollision(box1,box2)){alert('collision')};
       } // end if down event.keycode
 
       if (event.keyCode === 38) {
         counter -= 10;
         document.querySelector('.box1').style.top = counter + "px";
-       if(isCollision(box1,box2)){alert('collision')};
+       //if(isCollision(box1,box2)){alert('collision')};
      } // end if 38 up statement
 
      if (event.keyCode === 39) {
         goRight += 10;
         document.querySelector('.box1').style.left = goRight + "px";
-       if(isCollision(box1,box2)){alert('collision')};
+       //if(isCollision(box1,box2)){alert('collision')};
      } // end if 39 right statement, 37 to move left
 
      if (event.keyCode === 37) {
         goRight -= 10;
         document.querySelector('.box1').style.left = goRight + "px";
-       if(isCollision(box1,box2)){alert('collision')};
+       //if(isCollision(box1,box2)){alert('collision')};
      } // end if 37 left statement
 
     }); // end event listner keydown event
