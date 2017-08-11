@@ -30,12 +30,24 @@ window.onload = function() {
     }
   } // end 'is collision' function
 
+  //function CheckDimensions() {
+           // if (goRight < 0) {
+           // $box1.style.left = window.innerWidth + "px";
+       // } else if (goRight > window.innerWidth) {
+       //     $box1.style.left = "0px";
+       // }
+      //} //
+
+
 
 
 
   function startEvent() {
 
   setInterval(isCollision, 300);
+
+
+
 
     document.addEventListener('keydown', (event) => {
 
@@ -54,14 +66,25 @@ window.onload = function() {
      if (event.keyCode === 39) {
         goRight += 10;
         $box1.style.left = goRight + "px";
+    } // end if 39 right statement, 37 to move left
+
        //if(isCollision(box1,box2)){alert('collision')};
-     } // end if 39 right statement, 37 to move left
+
+
+
 
      if (event.keyCode === 37) {
         goRight -= 10;
         $box1.style.left = goRight + "px";
+      } // end if 37 left statement
+
+
        //if(isCollision(box1,box2)){alert('collision')};
-     } // end if 37 left statement
+
+
+
+
+
 
     }); // end 'event listner keydown event'
   } // end 'start event' function
