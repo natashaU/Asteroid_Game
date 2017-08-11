@@ -25,7 +25,11 @@ window.onload = function() {
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
       console.log('is collision');
-    $("#spaceshuttle").effect('explode')
+    $("#spaceshuttle").effect('explode');
+    let $h3 = $('<h3>');
+    let $collision = $('#collision');
+    $collision.append($h3);
+    $h3.html("Game Over!");
        //$("#spaceshuttle").explode()
 
       //$( "#spaceshuttle" ).hide( "explode", {pieces: 30}, 1000 );
