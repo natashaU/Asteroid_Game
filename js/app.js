@@ -3,8 +3,9 @@ window.onload = function() {
   document.getElementById("button").addEventListener("click", startEvent);
 
 
-  const $box1 = $('#box1')[0]; // represents space ship
-  const $box2 = $('#box2')[0]; // represents first asteroid
+  const $box1 = $('#box1')[0]; // box1 represents spaceship DIV
+  const $box2 = $('#box2')[0]; // box2 represents first asteroid DIV
+  //const $asteroid2 = $('#asteroid2')[0];
 
 
   let counter = 0
@@ -17,7 +18,7 @@ window.onload = function() {
     var $box1Pos = $box1.getBoundingClientRect();
     var $box2Pos = $box2.getBoundingClientRect();
 
-// algorithim to detect collision
+// algorithm to detect collision
     if ($box1Pos.top < $box2Pos.top + $box2Pos.width &&
         $box1Pos.top + $box1Pos.width > $box2Pos.top &&
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&

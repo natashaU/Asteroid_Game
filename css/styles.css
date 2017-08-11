@@ -23,21 +23,26 @@
 }
 
 body {
-    /*background-image: url("http://ak4.picdn.net/shutterstock/videos/3931352/thumb/1.jpg"); */
-    background-image: url("https://farm8.static.flickr.com/7542/15630428417_8fe9fe38a6_b.jpg");
-    /*background-color: #cccccc;*/
+    /* background-image: url("http://ak4.picdn.net/shutterstock/videos/3931352/thumb/1.jpg"); */
+    /*background-image: url("https://wallpaperscraft.com/image/stars_sky_night_113553_3100x1740.jpg"); */
+     background-image: url("https://vignette1.wikia.nocookie.net/steamtradingcards/images/c/cd/Kerbal_Space_Program_Background_Kerbin.jpg/revision/latest/scale-to-width-down/1280?cb=20131205203647");
+    /* background-image: url('http://i.imgur.com/Gac9Tl1.jpg'); */
+    /*background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/15-033i1.jpg"); */
+
+    background-color: #cccccc;
+    /* background: cover; */
+
 }
 
 #box1 {
   width: 100px;
   height: 100px;
  /* margin: 20px; */
-  border: 4px solid black;
-  background-color: blue;
-  font-size: 40px;
+  /*border: 4px solid black; */
+  /*background-color: blue; */
   position: relative;
   top: 100px;
-
+  /*background-image: url("http://clipart-library.com/img/1927810.png"); */
 
   /*animation: moveMyDiv 1s; */
   /*animation-fill-mode: forwards
@@ -63,22 +68,33 @@ body {
   animation: movBox1 5s linear 2s infinite alternate;
 }
 
-#asteroid2 {
-  width: 100px;
-  height: 100px;
+#box3 {
+  width: 400px;
+  height: 400px;
   /*margin: 20px; */
-  border: 4px solid black;
-  background-color: pink;
+  /*border: 4px solid black; */
   font-size: 40px;
   position: relative;
   top: 300px;
   /*animation: example 5s linear 2s infinite alternate; */
 }
 
+#asteroid2 {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+  max-height: 300px;
+}
+
   /*animation: moveMyDiv 1s;
   animation-fill-mode: forwards */
 
-
+ #spaceshuttle {
+  height: auto;
+  width: auto;
+  max-width: 50px;
+  max-height: 50px;
+ }
 
 #button {
   display: inline-block;
