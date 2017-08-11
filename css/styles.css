@@ -15,11 +15,11 @@
 
 
 @keyframes movBox1 {
-    0%   {left:0px; top:300px;}
-    25%  {left:200px; top:10px;}
-    50%  {left:200px; top:10px;}
-    75%  {left:0px; top:10px;}
-    100% {left:0px; top:300px;}
+    0%   {left:0px; top:500px;}
+    25%  {left:1000px; top:0px;}
+    50%  {left:1000px; top:0px;}
+    75%  {left:0px; top:0px;}
+    100% {left:0; top:600px;}
 }
 
 body {
@@ -66,7 +66,7 @@ body {
   font-size: 40px;
   position: relative;
   top: 400px;
-  animation: movBox1 5s linear 2s infinite alternate;
+  animation: movBox1 8s linear 1s infinite alternate;
 }
 
 #box3 {

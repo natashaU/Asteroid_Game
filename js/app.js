@@ -24,6 +24,8 @@ window.onload = function() {
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
       console.log('is collision');
+       //$("#spaceshuttle").explode()
+      $( "#spaceshuttle" ).hide( "explode", {pieces: 16}, 2000 );
       return true;
     } else {
       return false
