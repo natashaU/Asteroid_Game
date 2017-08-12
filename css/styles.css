@@ -47,6 +47,7 @@ body {
     background-attachment: fixed;
     /*background: cover; */
 
+
 }
 
 #box1 {
@@ -155,6 +156,44 @@ h3 {
   overflow: hidden;
   -webkit-animation: typing 2s steps(21, end),
              blink-caret .5s step-end
+}
+
+.flexcontainer {
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.inputbox {
+  /*min-height: 100vh; */
+  /*margin: 0 auto; */
+  /*display: flex;
+  justify-content: center;
+  align-items: center; */
+  background-color: transparent;
+  text-align: center;
+
+}
+
+label {
+  color: red;
+  font-family: 'Monoton';
+  font-size: 700%;
+  text-align: center;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid green;
+    background: transparent;
+    color: red;
+    text-align: center;
 }
 
 

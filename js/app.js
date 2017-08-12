@@ -87,7 +87,7 @@ window.onload = function() {
 
   setInterval(isCollision, 300);
   setInterval(isCollision2, 300);
-
+  $("#flexcontainer").detach();
 
 
 
