@@ -15,7 +15,7 @@
 
 
 
-
+@import url(https://fonts.googleapis.com/css?family=Monoton);
 
 
 
@@ -131,17 +131,21 @@ body {
   transition: 0.2s all;
 }
 
-#collision {
-  color: white;
-
-}
 
 
+
+/* edited and customized code from the following website to get the typewriter
+font effect for the "game over" message, and switched font for a retro font
+https://codemyui.com/auto-type-content-pure-css/
+*/
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
 h3 {
-  font: bold 1000% Consolas, Monaco, monospace;
+  /*font: bold 1000% Consolas, Monaco, monospace; */
+  font-family: 'Monoton';
+  font-size: 800%;
+  /*text-align: center; */
   color: white;
   border-right: .1em solid black;
   width: 16.5em;
@@ -152,4 +156,6 @@ h3 {
   -webkit-animation: typing 2s steps(21, end),
              blink-caret .5s step-end
 }
+
+
 

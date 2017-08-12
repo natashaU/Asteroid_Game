@@ -1,7 +1,7 @@
 window.onload = function() {
   console.log(document.getElementById('button'))
-  document.getElementById("button").addEventListener("click", startEvent);
-
+  //document.getElementById("button").addEventListener("click", startEvent);
+  $('#button').on("click", startEvent);
 
   const $box1 = $('#box1')[0]; // box1 represents spaceship DIV
   const $box2 = $('#box2')[0]; // box2 represents first asteroid DIV
@@ -11,6 +11,8 @@ window.onload = function() {
 
   let counter = 0
   let goRight = 0
+
+  const $spaceshuttle = $('#spaceshuttle')
 
 
   function isCollision(){
@@ -24,10 +26,9 @@ window.onload = function() {
         $box1Pos.top + $box1Pos.width > $box2Pos.top &&
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
-      console.log('is collision');
     $("#spaceshuttle").effect('explode');
-    let $h3 = $('<h3>');
-    let $collision = $('#collision');
+    const $h3 = $('<h3>');
+    const $collision = $('#collision');
     $collision.append($h3);
     $h3.html("Game Over!");
        //$("#spaceshuttle").explode()
@@ -40,8 +41,11 @@ window.onload = function() {
   } // end 'is collision' function
 
   function isCollision2(){
-    // this is for the second asteroid. I know it would similar to use one function for two,
-    // but when I did that I was having trouble call
+    // this is for the second asteroid. Why am I repeating the same function twice instead
+    // of passing arguments to the parameters and reusing the function? I tried doing that with Set Interval, but for some reason when
+    // including arguments in Set Interval it wouldn't function. I decided to repeat the function in a clunky way since
+    // i didn't want to mess around with collision detection. I'll experiment to see why Set Interval won't accept the isCollision function
+    // with arguments.
     var $box1Pos = $box1.getBoundingClientRect();
     var $box3Pos = $box3.getBoundingClientRect();
 
@@ -50,10 +54,10 @@ window.onload = function() {
         $box1Pos.top + $box1Pos.width > $box3Pos.top &&
        $box1Pos.left < $box3Pos.left + $box3Pos.height &&
         $box1Pos.height + $box1Pos.left > $box3Pos.left) {
-      console.log('is collision');
+      //console.log('is collision');
     $("#spaceshuttle").effect('explode')
-    let $h3 = $('<h3>');
-    let $collision = $('#collision');
+    const $h3 = $('<h3>');
+    const $collision = $('#collision');
     $collision.append($h3);
     $h3.html("Game Over!");
       return true;
@@ -87,6 +91,9 @@ window.onload = function() {
 
 
 
+
+
+
     document.addEventListener('keydown', (event) => {
 
       if (event.keyCode === 40) {
@@ -113,6 +120,8 @@ window.onload = function() {
 
      if (event.keyCode === 37) {
         goRight -= 10;
+
+
         $box1.style.left = goRight + "px";
       } // end if 37 left statement
 
