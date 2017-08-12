@@ -9,10 +9,14 @@ window.onload = function() {
   //const $asteroid2 = $('#asteroid2')[0];
 
 
-  let counter = 0
-  let goRight = 0
+  let counter = 0 // move vertical
+  let goRight = 0 // move horizontal
 
   const $spaceshuttle = $('#spaceshuttle')
+
+
+
+  let playerName = $("input:text").val(); // Sets Variable for user input
 
 
   function isCollision(){
@@ -30,7 +34,7 @@ window.onload = function() {
     const $h3 = $('<h3>');
     const $collision = $('#collision');
     $collision.append($h3);
-    $h3.html("Game Over!");
+    $h3.html("Game Over" + "<br>" + playerName + "!");
        //$("#spaceshuttle").explode()
 
       //$( "#spaceshuttle" ).hide( "explode", {pieces: 30}, 1000 );
@@ -59,7 +63,7 @@ window.onload = function() {
     const $h3 = $('<h3>');
     const $collision = $('#collision');
     $collision.append($h3);
-    $h3.html("Game Over!");
+    $h3.html('Game Over' + "<br>" + playerName + "!");
       return true;
     } else {
       return false
@@ -85,9 +89,16 @@ window.onload = function() {
 
   function startEvent() {
 
-  setInterval(isCollision, 300);
+  setInterval(isCollision, 300); // checks for collisions every 300 milliseconds
   setInterval(isCollision2, 300);
-  $("#flexcontainer").detach();
+
+  playerName = $("input:text").val();
+
+
+  $("#flexcontainer").detach(); // Removes User Input box at Start Click event
+
+
+
 
 
 
@@ -138,6 +149,10 @@ window.onload = function() {
 
 
 } // window onLoad end function
+
+
+
+
 
 
 
