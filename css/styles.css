@@ -15,7 +15,28 @@
 
 
 
+
+
 @import url(https://fonts.googleapis.com/css?family=Monoton);
+
+#myProgress {
+  /*margin: auto; */
+  padding: 10px;
+  width: 50%;
+  background-color: transparent;
+  position: absolute;
+  bottom:0px;
+  right:25%;
+  left:50%;
+  margin-left:-25%
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  background-color: #49fb35
+}
+
 
 
 
@@ -128,8 +149,13 @@ body {
   border: 3px solid #1D0444;
   border-radius: 30px;
   cursor: pointer;
-  background-color: green;
+  background-color: #49fb35;
   transition: 0.2s all;
+}
+
+#button:hover {
+    background-color: transparent;
+    color: white;
 }
 
 
@@ -139,18 +165,18 @@ body {
 font effect for the "game over" message, and switched font for a retro font
 https://codemyui.com/auto-type-content-pure-css/
 */
-@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes typing { from { width: 0; }  }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
 h3 {
   /*font: bold 1000% Consolas, Monaco, monospace; */
   font-family: 'Monoton';
-  font-size: 800%;
-  /*text-align: center; */
+  font-size: 700%;
+  text-align: center;
   color: white;
   border-right: .1em solid black;
-  width: 16.5em;
-  width: 21ch;
+  /*width: 16.5em;
+  width: 21ch; */
   margin: 2em 1em;
   white-space: nowrap;
   overflow: hidden;
@@ -166,6 +192,13 @@ h3 {
   align-items: center;
 
 }
+
+.collision {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .inputbox {
   /*min-height: 100vh; */
   /*margin: 0 auto; */
@@ -193,7 +226,9 @@ input[type=text] {
     border-bottom: 2px solid green;
     background: transparent;
     color: red;
+    font-size: 20px;
     text-align: center;
+    font-family: 'Montserrat Alternates';
 }
 
 

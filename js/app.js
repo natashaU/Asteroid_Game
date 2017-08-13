@@ -14,6 +14,38 @@ window.onload = function() {
 
   const $spaceshuttle = $('#spaceshuttle')
 
+  /*function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}; */
+
+
+
+
+
+
+
+// audio file not working, going to comment-it-out for now. THis is to play
+// explosion sound
+
+
+
+
+
+
+
+
+
 
 
   let playerName = $("input:text").val(); // Sets Variable for user input
@@ -31,6 +63,9 @@ window.onload = function() {
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
     $("#spaceshuttle").effect('explode');
+    $('#myProgress').remove();
+  //let explodeSound = new sound(8-bit-game-explosion-sound-effect.mp3);
+   //explodeSound.play();
     const $h3 = $('<h3>');
     const $collision = $('#collision');
     $collision.append($h3);
@@ -53,13 +88,18 @@ window.onload = function() {
     var $box1Pos = $box1.getBoundingClientRect();
     var $box3Pos = $box3.getBoundingClientRect();
 
+
+
 // algorithm to detect collision
     if ($box1Pos.top < $box3Pos.top + $box3Pos.width &&
         $box1Pos.top + $box1Pos.width > $box3Pos.top &&
        $box1Pos.left < $box3Pos.left + $box3Pos.height &&
         $box1Pos.height + $box1Pos.left > $box3Pos.left) {
       //console.log('is collision');
-    $("#spaceshuttle").effect('explode')
+    $("#spaceshuttle").effect('explode');
+    $('#myProgress').remove();
+    //let explodeSound = new sound(8-bit-game-explosion-sound-effect.mp3);
+    //explodeSound.play()
     const $h3 = $('<h3>');
     const $collision = $('#collision');
     $collision.append($h3);
@@ -69,6 +109,27 @@ window.onload = function() {
       return false
     }
   } // end 'is collision' function
+
+
+// adapted and edited code from W3 school https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
+  function timerbar() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 1000);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      const $h3 = $('<h3>');
+      const $collision = $('#collision');
+      $collision.append($h3);
+      $h3.html(playerName + "<br>" +  "wins!");
+      $box1.remove()
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
 
 
 
@@ -89,13 +150,27 @@ window.onload = function() {
 
   function startEvent() {
 
+   timerbar();
+
+    //let $myprogress = $('#myprogress');
+
+    //$($myprogress).css("border", "white");
+
+
+
   setInterval(isCollision, 300); // checks for collisions every 300 milliseconds
   setInterval(isCollision2, 300);
 
   playerName = $("input:text").val();
 
 
+
+
+
+
   $("#flexcontainer").detach(); // Removes User Input box at Start Click event
+
+
 
 
 
