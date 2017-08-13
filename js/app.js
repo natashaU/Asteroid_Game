@@ -29,12 +29,6 @@ window.onload = function() {
     }
 }; */
 
-
-
-
-
-
-
 // audio file not working, going to comment-it-out for now. THis is to play
 // explosion sound
 
@@ -110,6 +104,8 @@ window.onload = function() {
     }
   } // end 'is collision' function
 
+// Progress bar to keep track of time it takes to get across universe, if you make it
+// before the time is up, you are the winner.
 
 // adapted and edited code from W3 school https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
   function timerbar() {
@@ -134,15 +130,29 @@ window.onload = function() {
 
 
 
- // Function I'm experimenting with so if you go off the screen, the spaceship appears
- //  at the other end of the screen. Semi-works, still in experimentation stages.
-  //function CheckDimensions() {
-           // if (goRight < 0) {
-           // $box1.style.left = window.innerWidth + "px";
-       // } else if (goRight > window.innerWidth) {
-       //     $box1.style.left = "0px";
-       // }
-      //} //
+ // Functions I'm experimenting with so if you go off the screen, the spaceship appears
+ //  at the opposite of the screen, instead of disappearing. Semi-works, still in experimentation stages.
+  function CheckDimensions() {
+            if (goRight < 0) {
+           $box1.style.left = window.innerWidth + "px";
+              goRight += 10
+        } else if (goRight > window.innerWidth) {
+            $box1.style.left = "0px";
+              goRight +=10
+        }
+
+
+      } //
+
+      function CheckHeight() {
+        if (counter < -110) {
+          $box1.style.top = window.innerHeight + "px";
+          counter += 10;
+        } else if (counter > window.innerHeight) {
+          $box1.style.top = "0px";
+          counter += 10
+        }
+      }
 
 
 
@@ -152,9 +162,9 @@ window.onload = function() {
 
    timerbar();
 
-    //let $myprogress = $('#myprogress');
+    let $myBar = $('#myBar');
 
-    //$($myprogress).css("border", "white");
+    $($myBar).css("border", "white");
 
 
 
@@ -185,18 +195,21 @@ window.onload = function() {
       if (event.keyCode === 40) {
         counter += 10;
         $box1.style.top = counter + "px";
+        CheckHeight()
        //if(isCollision(box1,box2)){alert('collision')};
       } // end if down event.keycode, arrow key down
 
       if (event.keyCode === 38) {
         counter -= 10;
         $box1.style.top = counter + "px";
+        CheckHeight()
        //if(isCollision(box1,box2)){alert('collision')};
      } // end if 38 up statement, arrow key up
 
      if (event.keyCode === 39) {
         goRight += 10;
         $box1.style.left = goRight + "px";
+        CheckDimensions()
     } // end if 39 right statement, 37 to move left
 
        //if(isCollision(box1,box2)){alert('collision')};
@@ -209,6 +222,7 @@ window.onload = function() {
 
 
         $box1.style.left = goRight + "px";
+        CheckDimensions()
       } // end if 37 left statement
 
 
@@ -227,8 +241,11 @@ window.onload = function() {
 
 
 
+// first music also good:
+// <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148261051&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
-
+// second music option:
+//<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/168136262&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
 
 

@@ -19,6 +19,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Monoton);
 
+iframe {
+  display: none;
+}
+
 #myProgress {
   /*margin: auto; */
   padding: 10px;
@@ -32,7 +36,7 @@
 }
 
 #myBar {
-  width: 1%;
+  width: 0%;
   height: 10px;
   background-color: #49fb35
 }
