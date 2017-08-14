@@ -2,6 +2,8 @@
 
 **The Game:** To make it across the universe without getting hit by an asteroid
 
+[Play the game here](http://battlestarandromeda.bitballoon.com/)
+
 ## To Play
 
 Move the spaceship  with the left, right, up, and down arrow keys across the galaxy.
