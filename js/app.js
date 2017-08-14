@@ -1,7 +1,27 @@
 window.onload = function() {
-  console.log(document.getElementById('button'))
+  console.log(document.getElementById('startbutton'))
   //document.getElementById("button").addEventListener("click", startEvent);
-  $('#button').on("click", startEvent);
+  $('#startbutton').on("click", startEvent);
+
+
+
+// makes restart button
+
+function reloadHere(){
+  location.reload();
+}
+
+$('#restartbutton').on('click', reloadHere);
+
+/*function makeRestart() {
+  const $restartButton = $('<button>');
+  const $restartdiv = $('#restartdiv');
+  $restartdiv.append($restartButton);
+  function reloadHere() {
+    location.reload()
+  };
+  $restartButton.on("click", reloadHere)
+} */
 
   const $box1 = $('#box1')[0]; // box1 represents spaceship DIV
   const $box2 = $('#box2')[0]; // box2 represents first asteroid DIV
@@ -56,14 +76,19 @@ window.onload = function() {
         $box1Pos.top + $box1Pos.width > $box2Pos.top &&
        $box1Pos.left < $box2Pos.left + $box2Pos.height &&
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
+    //const $explode = $("#sound")
     $("#spaceshuttle").effect('explode');
+    //$explode.html('<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116930021&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>')
     $('#myProgress').remove();
+
+
   //let explodeSound = new sound(8-bit-game-explosion-sound-effect.mp3);
    //explodeSound.play();
     const $h3 = $('<h3>');
     const $collision = $('#collision');
     $collision.append($h3);
     $h3.html("Game Over" + "<br>" + playerName + "!");
+    makeRestart();
        //$("#spaceshuttle").explode()
 
       //$( "#spaceshuttle" ).hide( "explode", {pieces: 30}, 1000 );
@@ -90,8 +115,12 @@ window.onload = function() {
        $box1Pos.left < $box3Pos.left + $box3Pos.height &&
         $box1Pos.height + $box1Pos.left > $box3Pos.left) {
       //console.log('is collision');
+    //const $explode = $("#sound")
     $("#spaceshuttle").effect('explode');
+    //$explode.html('<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116930021&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>')
     $('#myProgress').remove();
+
+
     //let explodeSound = new sound(8-bit-game-explosion-sound-effect.mp3);
     //explodeSound.play()
     const $h3 = $('<h3>');
@@ -158,20 +187,22 @@ window.onload = function() {
 
 
 
+
   function startEvent() {
 
-   timerbar();
+    $('#startbutton').remove() // removes start button
+
+    timerbar(); // progress bar starts
 
     let $myBar = $('#myBar');
-
-    $($myBar).css("border", "white");
+  $($myBar).css("border", "white");
 
 
 
   setInterval(isCollision, 300); // checks for collisions every 300 milliseconds
   setInterval(isCollision2, 300);
 
-  playerName = $("input:text").val();
+  playerName = $("input:text").val(); // gets player name from input box
 
 
 
@@ -240,6 +271,8 @@ window.onload = function() {
 } // window onLoad end function
 
 
+// explosion sound:
+//<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116930021&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 
 // first music also good:
 // <iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/148261051&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
