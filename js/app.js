@@ -78,6 +78,11 @@ $('#restartbutton').on('click', reloadHere);
         $box1Pos.height + $box1Pos.left > $box2Pos.left) {
     //const $explode = $("#sound")
     $("#spaceshuttle").effect('explode');
+
+    // to play audio here
+    //var myAudio = new Audio("js/ new audio file.mp3");
+    // myAudio.play();
+
     //$explode.html('<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/116930021&amp;auto_play=true&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>')
     $('#myProgress').remove();
 
@@ -88,7 +93,7 @@ $('#restartbutton').on('click', reloadHere);
     const $collision = $('#collision');
     $collision.append($h3);
     $h3.html("Game Over" + "<br>" + playerName + "!");
-    makeRestart();
+    //makeRestart();
        //$("#spaceshuttle").explode()
 
       //$( "#spaceshuttle" ).hide( "explode", {pieces: 30}, 1000 );
@@ -134,7 +139,7 @@ $('#restartbutton').on('click', reloadHere);
   } // end 'is collision' function
 
 // Progress bar to keep track of time it takes to get across universe, if you make it
-// before the time is up, you are the winner.
+// until the time is up, you are the winner.
 
 // adapted and edited code from W3 school https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_progressbar_3
   function timerbar() {
@@ -194,6 +199,7 @@ $('#restartbutton').on('click', reloadHere);
 
     timerbar(); // progress bar starts
 
+// not working css
     let $myBar = $('#myBar');
   $($myBar).css("border", "white");
 

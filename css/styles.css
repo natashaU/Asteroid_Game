@@ -23,6 +23,12 @@ iframe {
   display: none;
 }
 
+#restartbutton {
+  position: absolute;
+}
+
+
+
 #myProgress {
   /*margin: auto; */
   padding: 10px;
